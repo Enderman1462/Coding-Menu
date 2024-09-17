@@ -1,0 +1,29 @@
+@echo off
+echo Enderman's Coding Menu
+:menu
+
+echo 1 - Command Prompt
+echo 2 - Notepad
+echo 3 - Notepad ++
+echo 4 - Exit
+
+SET /P C=Type 1, 2, 3, or 4 then press ENTER:
+IF %C%==1 GOTO CMD
+IF %C%==2 GOTO N
+IF %C%==2 GOTO NPP
+IF %C%==2 GOTO EXIT
+
+:CMD
+cd %windir%\system32\cmd.exe
+start cmd.exe
+GOTO menu
+:N
+cd %windir%\system32\notepad.exe
+start notepad.exe
+GOTO menu
+:NPP
+cd C:\Program Files\Notepad++
+start notepad++.exe
+GOTO Menu
+:Exit
+taskkill /IM “C:\Windows\system32\cmd.exe” /F
